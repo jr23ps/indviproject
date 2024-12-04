@@ -1,0 +1,66 @@
+﻿@page
+@model indviproject.Pages.contactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<link href="~/css/style1.css" rel="stylesheet" />
+
+<div class="container">
+    <header class="jumbotron text-center">
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <section class="row">
+        <h2>Contact</h2>
+        <form method="post">
+            <div>
+                <label for="Name">Name:</label>
+                <input type="text" id="Name" name="Name" value="@Model.Name" />
+            </div>
+            <br />
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="Phone" name="Phone" value="@Model.Phone" />
+            </div>
+            <br />
+            <div>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" value="@Model.Email" />
+            </div>
+            <br />
+            <div>
+                <label for="Message">Reason:</label>
+                <textarea id="Reason" name="Reason">@Model.Reason</textarea>
+            </div>
+            <br />
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        @if (Model.IsSubmitted)
+        {
+            <div class="submitted-info">
+                <h2>Submitted Information</h2>
+                <p><strong>Name:</strong> @Model.Name</p>
+                <p><strong>Phone:</strong> @Model.Phone</p>
+                <p><strong>Email:</strong> @Model.Email</p>
+                <p><strong>Message:</strong> @Model.Reason</p>
+            </div>
+        }
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        
+    </section>
+
+
+</div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>

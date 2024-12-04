@@ -1,0 +1,57 @@
+﻿@page
+@model indviproject.Pages.quizModel
+@{
+ ViewData["Title"] = "Diet Quiz";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<header class="jumbotron text-center">
+    <h1>@ViewData["Title"]</h1>
+</header>
+
+<form method="post">
+    <ol>
+        <!--Question One-->
+        <li>What are chimpanzees source of protein?</li>
+        <label style="color:@Model.Msg1Color">@Model.answerMsg1</label>
+        <br />
+        <input type="radio" asp-for="question1" value="7m" /> Small monkeys
+        <br />
+        <input type="radio" asp-for="question1" value="4m" /> Fruits
+        <br />
+        <input type="radio" asp-for="question1" value="10m" /> Seeds
+        <br />
+        <br />
+
+        <!--Question Two-->
+        <li>What do chimpanzees mostly eat?</li>
+        <label style="color:@Model.Msg2Color">@Model.answerMsg2</label>
+        <br />
+        <input type="radio" asp-for="question2" value="5-4 tones" /> leaves
+
+        <br />
+        <input type="radio" asp-for="question2" value="5-7 tones" /> Chicken
+        <br />
+        <input type="radio" asp-for="question2" value="4-8 tones" /> Ribs
+        <br />
+        <br />
+
+        <!-- Question Three -->
+        <li>Chimpanzees have an omnivorous diet.</li>
+        <label style="color:@Model.Msg3Color">@Model.answerMsg3</label>
+        <br />
+        <input type="radio" asp-for="question3" value="True" /> True
+
+        <br />
+        <input type="radio" asp-for="question3" value="False" />False
+        <br />
+        <br />
+        <input type="submit" asp-page-handler="Submit" value="Submit" />
+    </ol>
+    <label style="color: @Model.MsgColor">@Model.msgScore</label> 
+</form>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>

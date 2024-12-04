@@ -1,0 +1,45 @@
+﻿@page
+@model indviproject.Pages.GalleryModel
+@{
+    ViewData["Title"] = "Chimpanzee Gallery";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<div class="container">
+        <header class="jumbotron text-center">
+            <h1>@ViewData["Title"]</h1>
+        </header>
+       
+
+    <hr />
+
+    <section class="row text-center">
+        <div class="col-md-4">
+            <img src="~/image/we.jpg" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/image/cd.jpg" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/image/bc.jpg" />
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        <div class="col-md-4">
+            <img src="~/image/cv.jpg" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/image/fd.jpg" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/image/sa.jpg" />
+        </div>
+    </section>
+</div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>

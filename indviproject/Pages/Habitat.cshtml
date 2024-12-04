@@ -1,0 +1,60 @@
+﻿@page
+@model indviproject.Pages.HabitatModel
+@{
+    ViewData["Title"] = "Habitat";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<div class="container">
+    <header class="jumbotron text-center">
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <section class="row">
+        <h2>Chimpanzees Habitat</h2>
+        <div class="col-md-6">
+           
+            <p>
+                Chimpanzees (Pan troglodytes) primarily inhabit tropical forests and savannas in Central and West Africa. Their range spans across more than 20 countries, including the Congo Basin, Uganda,
+                and Gabon. These highly adaptable primates thrive in a variety of environments, from dense rainforests to open woodlands and grasslands with scattered trees. Chimpanzees rely on their 
+                habitats for food, shelter, and social interactions, often building nests in trees for sleeping. Key resources such as fruiting trees, water sources, and abundant foliage are crucial to 
+                sustaining their populations. Seasonal changes also influence their movements, as they follow food availability.
+
+ 
+            </p>
+            <a class="btn btn-primary" href="https://www.britannica.com/animal/chimpanzee">Learn More</a>
+        </div>
+        <div class="col-md-6">
+            <p>
+                Unfortunately, chimpanzee habitats face increasing threats due to human activities. Deforestation for agriculture, logging, and infrastructure development has led to significant habitat
+                loss and fragmentation, making it harder for chimpanzees to find food and maintain social groups. Illegal hunting and poaching compound these challenges, as does disease transmission
+                from humans. Conservation efforts, including protected reserves and community-based initiatives, are critical for preserving chimpanzee habitats. By addressing these issues, we can help
+                secure the future of these intelligent and endangered primates while maintaining the biodiversity of their ecosystems.
+            </p>
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        <form method="post">
+            @if (Model.CurrentStep == "Step1")
+            {
+                <div>
+                    <label>What interests you most about chimpanzee habitats?</label>
+                    <input type="text" asp-for="HabitatResponse" class="form-control" />
+                </div>
+            }
+           
+           
+
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </section>
+
+   
+</div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>

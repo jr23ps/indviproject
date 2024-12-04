@@ -1,0 +1,48 @@
+﻿@page
+@model indviproject.Pages.homeModel
+@{
+    ViewData["Title"] = "Chimpanzees - Homepage";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+
+<div class="container">
+    <header class="jumbotron text-center">
+        <h1>@ViewData["Title"]</h1>
+        <p class="lead">Learn about the fascinating world of chimpanzees, our closest living relatives in the animal kingdom.</p>
+    </header>
+
+    <section class="row">
+        <div class="col-md-6">
+            <h2>About Chimpanzees</h2>
+            <p>
+                Chimpanzees are intelligent, social primates found in African rainforests and savannahs. They share about 98% of their DNA with humans, making them one of our closest living relatives.
+                These highly sociable animals live in complex groups and use tools, exhibit emotional behaviors, and have intricate social relationships.
+            </p>
+            <a class="btn btn-primary" href="/Chimpanzees/LearnMore">Learn More</a>
+        </div>
+        <div class="col-md-6">
+            <img src="/images/th.jpg" alt="Chimpanzee Image" class="img-fluid">
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        <div class="col-md-4">
+            <h3>Habitat</h3>
+            <p>Chimpanzees inhabit tropical rainforests and woodlands in central and western Africa.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Diet</h3>
+            <p>They primarily eat fruits, but their diet also includes leaves, insects, and occasionally small animals.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Behavior</h3>
+            <p>Known for their complex social structures, chimpanzees display emotions such as empathy and grief.</p>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p>© 2024 Chimpanzee World. All Rights Reserved.</p>
+    </footer>
+</div>

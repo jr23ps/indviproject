@@ -1,0 +1,54 @@
+﻿@page
+@model indviproject.Pages.BehaviorModel
+@{
+    ViewData["Title"] = "Behavior";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<div class="container">
+    <header class="jumbotron text-center">
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <section class="row">
+        <h2>Chimpanzees Behavior</h2>
+        <div class="col-md-6">
+            
+            <p>
+                Chimpanzees exhibit complex social behaviors and live in dynamic communities called "fission-fusion" groups, which can range from 20 to over 100 individuals. These groups are fluid, with 
+                members frequently splitting into smaller subgroups to forage or socialize. Chimpanzees have a strict social hierarchy, with dominant males often asserting control through displays of 
+                strength and strategic alliances. Grooming plays a crucial role in maintaining social bonds, reducing tension, and establishing trust among group members.
+            </p>
+            <a class="btn btn-primary" href="https://www.britannica.com/animal/chimpanzee">Learn More</a>
+        </div>
+        <div class="col-md-6">
+            <p>
+                Chimpanzees are highly intelligent and demonstrate a wide range of behaviors, including tool use, communication, and problem-solving. They use tools such as sticks to extract insects from
+                nests or stones to crack open nuts, showcasing their ingenuity. Their communication includes vocalizations, gestures, and facial expressions, enabling them to convey emotions and
+                intentions effectively. Play is common, especially among young chimpanzees, helping them develop skills and strengthen social connections. These behaviors underline their adaptability,
+                complex social structures, and striking similarities to human behavior.
+            </p>
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        <form method="post">
+            @if (Model.CurrentStep == "Step1")
+            {
+                <div>
+                    <label> Submit Your own observations or experiences related to chimpanzee behavior ( when visit zoo or wildlife reserves).</label>
+                    <input type="text" asp-for="BehaviorResponse" class="form-control" />
+                </div>
+            }
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </section>
+
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>

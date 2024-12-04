@@ -1,0 +1,53 @@
+﻿@page
+@model indviproject.Pages.DietModel
+@{
+    ViewData["Title"] = "Diet";
+}
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<div class="container">
+    <header class="jumbotron text-center">
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <section class="row">
+        <h2>Chimpanzees Diet</h2>
+        <div class="col-md-6">
+            <p>
+                Chimpanzees have an omnivorous diet, consisting mainly of fruits, leaves, and seeds, which make up the bulk of their nutrition. They are skilled foragers, selecting from over 100 different 
+                plant species based on availability and season. Fruits, especially figs, are a favorite, providing essential sugars and energy. Chimpanzees also consume leaves, flowers, bark, and stems 
+                for additional nutrients. Their diet is highly flexible, enabling them to adapt to the changing availability of resources in their diverse habitats.
+                </p>
+                
+            <a class="btn btn-primary" href="https://www.britannica.com/animal/chimpanzee">Learn More</a>
+        </div>
+        <div class="col-md-6">
+            <p> 
+            In addition to plant matter, chimpanzees eat animal-based foods, including insects like termites and ants, which they extract using tools such as sticks. Occasionally, they hunt small
+            mammals, including monkeys, for protein. These hunting behaviors are often social activities, involving cooperation and strategy within the group. The variety in their diet not only
+            sustains their physical health but also highlights their intelligence and ability to use tools and teamwork in obtaining food.
+            </p>
+            <a class="btn btn-primary" href="/quiz">Test Your Knowledge</a>
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row text-center">
+        <form method="post">
+            @if (Model.CurrentStep == "Step1")
+            {
+                <div>
+                    <label>What food would you share with a chimpanzees.</label>
+                    <input type="text" asp-for="DietResponse" class="form-control" />
+                </div>
+            }
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </section>
+
+</div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - indviproject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+</footer>
